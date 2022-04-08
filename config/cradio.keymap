@@ -29,6 +29,16 @@
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
+         combo_lctr {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LCTL>;
+        };
+         combo_rctr {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp LCTL>;
+        };
         
             combo_ralt {
             timeout-ms = <50>;
@@ -74,8 +84,8 @@
        		left_layer {
 		bindings = <
 		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp BSPC &kp DEL  &kp NUM_0 
-		&mt LSFT ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &mt LSFT COLN 
+		&kp TAB    &kp MINUS    &kp EQUAL      &kp SLASH     &kp BSLH 		&kp MINUS &kp EQL  &kp BSPC &kp BSPC  &kp NUM_0 
+		&mt LSFT ESC   &kp GRAVE 	&kp SQT &kp SEMI  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &mt LSFT SCLN 
 					    &mo 1  &kp LCTL  					&kp RGUI &mo 2 
 		>;
 		};
