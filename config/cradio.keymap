@@ -14,14 +14,14 @@
    // tapping_term_ms = <200>;
 };
 
-/ { 
+/ {
 
     combos {
         compatible = "zmk,combos";
         combo_backspace {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            bindings = <&kp BKSP>;
+            bindings = <&kp BSPC>;
         };
         combo_del {
             timeout-ms = <50>;
@@ -33,7 +33,7 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-        
+
          combo_tab {
             timeout-ms = <50>;
             key-positions = <10 11>;
@@ -42,81 +42,81 @@
          combo_lctr {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&kp LCTL>;
+            bindings = <&kp LCTRL>;
         };
          combo_rctr {
             timeout-ms = <50>;
             key-positions = <28 29>;
-            bindings = <&kp LCTL>;
+            bindings = <&kp LCTRL>;
         };
-        
+
             combo_ralt {
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp RALT>;
         };
-        
+
                     combo_lalt {
             timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
         };
-        
+
                            combo_lgui {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LGUI>;
         };
-        
-        
+
+
            combo_rgui {
             timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp RGUI>;
         };
-        
 
-        
+
+
     };
 
         keymap {
                 compatible = "zmk,keymap";
-                
-       		default_layer {
-		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp COLN
-		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-          				&mo 1 &kp SPC  				&kp SPC &mo 2 
-		>;
-		};
 
-       		left_layer {
-		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp GRAVE   &kp SLASH     &kp SCLN     &kp QUOT 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp BKSP 
-		&mt LSFT ESC    &trans 	&trans       &mo 3        &trans 	        &trans &mo 3 &trans &trans &mt LSFT DEL 
-					    &mo 1  &kp LCTL  					&kp RGUI &mo 2 
-		>;
-		};
-		
-		right_layer {
-		bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
-		>;
-		};	
-		
-		tri_layer {
-		bindings = <
-		&kp F1  &kp F2    &kp F3    &kp F4    &kp F5 			&kp PG_UP &trans   &UP   &trans  &trans
-		&kp F6 &kp F7 &kp F8 &kp F9 &kp F10  						&kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &trans 
-		&reset  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&kp K_MUTE &K_VOL_DN  &kp K_VOL_UP  &trans &reset   
-					 &trans &trans  					&trans &trans 
-		>;
-		};	
-        
-	};
+                default_layer {
+                bindings = <
+                &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U  &kp I    &kp O   &kp P
+                &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp COLON
+                &mt LSHIFT Z &kp X &kp C &kp V &kp B                                      &kp N &kp M  &kp COMMA &kp DOT &mt LSHIFT RET
+                                        &mo 1 &kp SPACE                           &kp SPACE &mo 2
+                >;
+                };
+
+                left_layer {
+                bindings = <
+                &kp N1  &kp N2    &kp N3    &kp N4    &kp N5             &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+                &kp TAB    &kp GRAVE   &kp SLASH     &kp SEMI     &kp SQT              &kp MINUS &kp EQUAL  &kp LBKT &kp RBKT  &kp BSPC
+                &mt LSHIFT ESC &trans     &trans       &mo 3        &trans                &trans &mo 3 &trans &trans &mt LSHIFT DEL
+                                            &mo 1  &kp LCTRL                                     &kp RGUI &mo 2
+                >;
+                };
+
+                right_layer {
+                bindings = <
+                &kp EXCL  &kp AT &kp HASH  &kp DLLR  &kp PRCNT                         &kp CARET  &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
+                &kp HASH  &kp QMARK  &kp FSLH  &kp COLON  &kp SEMI                       &kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BSPC
+                &kp LSHIFT  &kp KP_PLUS &kp LBKT &kp RBKT   &kp BSLH                         &kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+                                          &mo 3 &kp LCTRL                                &kp SPACE  &mo 2
+                >;
+                };
+
+                tri_layer {
+                bindings = <
+                &kp F1  &kp F2    &kp F3    &kp F4    &kp F5                    &kp PG_UP &trans   &UP   &trans  &trans
+                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10                                             &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &trans
+                &reset  &kp F11 &kp F12 &kp F13 &kp F14                            &kp K_MUTE &K_VOL_DN  &kp K_VOL_UP  &trans &reset
+                                         &trans &trans                                          &trans &trans
+                >;
+                };
+
+        };
 };
